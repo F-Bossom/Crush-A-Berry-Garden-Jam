@@ -1,0 +1,13 @@
+DONE ~ as a user I want a landing page where we can "start game" and see a brief explanation of the rules
+DONE ~ as a user I want there to be a grid of bushes 🌳 for the berries
+DONE ~ as a user I want the berries to pop up smaller when they are "growing" not ready
+DONE ~ as a user I want the berries to turn "rotten" if you take too long to click/crush them 
+DONE ~ as a user I want ripe berries 🫐🍇🍓🍒 to add to the jam jar total when they are clicked/crushed. Berries still growing or rotten do not add to it.
+DONE ~ as a user I want the ripe berries to make a "squish" sound when you click/crush them
+DONE ~ as a user I want💥to appear when a ripe berry is crushed
+DONE ~ as a user I want a jam jar 🫙 at the top with a progress bar of how much jam we have made
+DONE ~ as a user I want a game timer ⏱ so if they run out of time before they make enough jam, game over
+DONE ~ as a user I want caterpillars 🐛 to pop up occasionally and if you click one, you lose some time from your game timer and can't click anything for a couple seconds
+DONE ~ as a user I want bunnies 🐇 to pop up occasionally (like the caterpillars) but this grants you extra time to your game timer
+DONE ~ as a user when you collect enough jam before time runs out, I want a fun sound to play along with the winning message
+DONE ~ as a user when you fail to collect enough jam before time runs out, I want a sad sound to play along with the losing message

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crush-A-Berry: Garden Jam</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/data.js"></script>
+    <script defer src="js/dom.js"></script>
+    <script defer src="js/game.js"></script>
+  </head>
+
+  <body>
+    <!-- Landing Page -->
+    <div id="landing">
+      <h1>Crush-A-Berry: Garden Jam!</h1>
+      <p>
+        Click ripe <span class="demo-berry">🫐🍇🍓🍒</span> to make jam! Lookout
+        for growing
+        <span class="demo-berry demo-growing">🫐🍇🍓🍒</span> they're not ready
+        for jam yet
+      </p>
+      <p>
+        Rotten <span class="demo-berry demo-rotten">🫐🍇🍓🍒</span> will fall
+        off the bushes and decrease your total amount of jam!<span
+          class="demo-jamJar"
+          >🫙</span
+        >
+      </p>
+      <p>
+        Avoid clicking <span class="demo-caterpillar">🐛</span> or you will lose
+        time! Click the <span class="demo-bunny">🐇</span> for extra time!
+      </p>
+      <p>✨Can you fill the jam jar before time runs out?✨</p>
+      <button id="startBtn">Start Game</button>
+    </div>
+
+    <!-- Game Header -->
+    <header id="gameHeader" class="hidden">
+      <div id="jamContainer">
+        <span id="jamJar">🫙</span>
+        <div id="jamBarContainer">
+          <div id="jamBar"></div>
+        </div>
+      </div>
+
+      <div id="timerContainer">
+        <span id="timerLabel">⏱:</span>
+        <span id="timer">60s</span>
+      </div>
+    </header>
+
+    <!-- Garden Grid -->
+    <div id="garden"></div>
+
+    <!--  Click Lock Overlay -->
+    <div id="clickOverlay"></div>
+
+    <!-- End Screen -->
+    <div id="endScreenOverlay">
+      <div id="endScreen">
+        <h2 id="endMessage"></h2>
+        <button id="restart">Play Again</button>
+      </div>
+    </div>
+
+    <!-- Sounds -->
+    <audio id="squishSound" src="Sounds/squish.mp3"></audio>
+    <audio id="winSound" src="Sounds/win.mp3"></audio>
+    <audio id="loseSound" src="Sounds/lose.mp3"></audio>
+  </body>
+</html>

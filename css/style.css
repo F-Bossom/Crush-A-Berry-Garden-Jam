@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  background: #f7f2e8;
+  color: #333;
+  height: 100vh;
+  overflow: hidden; /* prevents scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+.click-locked {
+  cursor: not-allowed; /* changes mouse cursor for caterpillars */
+}
+
+#clickOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: not-allowed; /* blocks clicks after caterpillars */
+  display: none; /* hidden when not needed */
+  z-index: 50;
+}
+
+p {
+  font-size: 20px;
+}
+
+#garden {
+  cursor: pointer;
+}
+
+#gameArea {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+/* Hidden utility */
+.hidden {
+  display: none;
+}
+
+/* Landing Page */
+#landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#startBtn,
+#restart {
+  padding: 12px 24px;
+  background: #6bbf59;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+#startBtn:hover,
+#restart:hover {
+  background: #428034;
+}
+
+/* Header */
+#gameHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.712);
+  border-bottom: 4px solid #ccb27a;
+  user-select: none; /* prevents mouse from highlighting */
+}
+
+/* Jam bar */
+#jamContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#jamJar {
+  font-size: 2.5rem;
+}
+
+#jamBarContainer {
+  width: 250px;
+  height: 24px;
+  background: #f3dcbc;
+  border: 2px solid #8c5d2e;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#jamBar {
+  height: 100%;
+  width: 0%;
+  background: #b13659;
+  transition: width 0.3s;
+}
+
+/* Timer */
+#timerContainer {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+/* Garden Grid */
+#garden {
+  display: grid;
+  grid-template-columns: repeat(4, 130px);
+  grid-template-rows: repeat(3, 130px);
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+  user-select: none; /* prevents mouse from highlighting the grid */
+}
+
+/* Bush square */
+.bush {
+  width: 130px;
+  height: 130px;
+  background: #e3d9bc;
+  border: 4px solid #bda877;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bush-icon {
+  font-size: 7rem;
+  line-height: 1;
+  position: absolute;
+  top: 8px;
+  pointer-events: none;
+}
+
+/* Berry */
+.berry {
+  position: absolute;
+  bottom: 20px;
+  font-size: 3rem;
+}
+
+/* Growing */
+.berry.growing {
+  opacity: 0.6;
+  transform: scale(0.7);
+}
+
+/* Ripe */
+.berry.ripe {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Rotten */
+.berry.rotten {
+  filter: grayscale(100%) brightness(60%);
+}
+
+#endScreenOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+/* Popup box */
+#endScreen {
+  background: #fff8e6;
+  border: 3px solid #ccb27a;
+  border-radius: 12px;
+  padding: 30px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* smooth pop-in */
+  transform: scale(0.8);
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+/* When shown */
+#endScreen.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Demo-only berries for instruction text */
+.demo-berry {
+  font-size: 2rem;
+}
+
+.demo-growing {
+  opacity: 0.6;
+  font-size: 1.5rem;
+}
+
+.demo-rotten {
+  filter: grayscale(100%) brightness(60%);
+}
+
+.demo-bunny {
+  font-size: 2rem;
+}
+
+.demo-caterpillar {
+  font-size: 2rem;
+}
+
+.demo-jamJar {
+  font-size: 2rem;
+}
