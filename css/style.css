@@ -30,12 +30,17 @@ body {
 }
 
 p {
-  font-size: 20px;
+  font-family:"Margarine", "Comic Sans MS", cursive;
+  font-size: 30px;
+  margin: 0;
 }
 
-#garden {
-  cursor: pointer;
+h1{
+  font-family: "Margarine", "Comic Sans MS", cursive;
+  font-size: 60px;
+  margin: 0;
 }
+
 
 #gameArea {
   flex: 1;
@@ -53,13 +58,12 @@ p {
 
 /* Landing Page */
 #landing {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
+  gap: 10px;
 }
 
 #startBtn,
@@ -130,9 +134,10 @@ p {
   grid-template-columns: repeat(4, 130px);
   grid-template-rows: repeat(3, 130px);
   gap: 20px;
+  margin-top: 10px;
   justify-content: center;
-  padding: 40px;
   user-select: none; /* prevents mouse from highlighting the grid */
+  cursor: pointer;
 }
 
 /* Bush square */

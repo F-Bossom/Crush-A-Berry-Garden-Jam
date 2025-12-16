@@ -30,6 +30,7 @@ include link to game here
 
 - Referenced class lecture and lab materials
 - MDN Web Docs (https://developer.mozilla.org/)
+- Pixaby for the soundbites (https://pixabay.com/sound-effects/)
 - ChatGPT was used as a debugging and code-review assistant
 
 ## 🌱 Game Concept & Features
