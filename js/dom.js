@@ -44,8 +44,6 @@ function updateTimerDisplay() {
 function startGameUI() {
   landingPage.classList.add("hidden");
   gameHeader.classList.remove("hidden");
-  garden.classList.remove("hidden");
-  endScreen.classList.add("hidden");
 }
 
 // Shows end screen overlay with message

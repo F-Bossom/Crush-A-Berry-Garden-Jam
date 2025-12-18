@@ -1,3 +1,4 @@
+**PLANNING MATERIALS**
 DONE ~ as a user I want a landing page where we can "start game" and see a brief explanation of the rules
 DONE ~ as a user I want there to be a grid of bushes 🌳 for the berries
 DONE ~ as a user I want the berries to pop up smaller when they are "growing" not ready

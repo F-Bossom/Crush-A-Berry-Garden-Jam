@@ -223,7 +223,7 @@ function spawnSpecial(bush) {
 
   // Caterpillar: penalizes time and locks input
   if (roll < 0.5) {
-    // 50% change to spawn
+    // 50% chance to spawn
     berry.textContent = "🐛";
     bush.onclick = () => {
       if (clickInputLocked || gameOver) return;

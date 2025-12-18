@@ -6,19 +6,19 @@
 
 ## 🎮 Getting Started & How to Play
 
-include link to game here
+https://f-bossom.github.io/Crush-A-Berry-Garden-Jam/
 
 - Click **ripe berries** 🫐🍇🍓🍒 to turn them into jam
 - Watch out for **growing berries** — they’re not ready to be made into jam yet!
-- **Rotten berries** will fall off the bushes automatically and _reduce_ your total amount of jam (guess you spilled some while cleaning up)
+- **Rotten berries** will fall off the bushes automatically and _reduce_ your total amount of jam (guess you spilled some jam while cleaning up rotten berries)
 - Fill the jam jar before the timer runs out to win!
 
 ## ⏱️ Game Rules
 
 - You start with **60 seconds**
 - The jam bar fills as you collect ripe berries
-- Avoid clicking the 🐛 or they will eat some of your berries... And you have to swipe this pest away before continuing to gather! Costing you time and jam! (- 5 seconds & click-locked 3 seconds)
-- Click the 🐇 to gain more time! They are so happy you chose to give them a berry that you gain more game time! (+5 seconds)
+- Avoid clicking the 🐛 or they will eat some of your berries... And you have to swipe this pest away before continuing to gather! Costing you time and jam! (your game timer will lose 5 seconds & your mouse is click-locked 3 seconds)
+- Click the 🐇 to gain more time! They are so happy you chose to give them a berry that you gain more game time! (your game timer will gain 5 seconds)
 
 ## 🛠️ Technologies Used
 
@@ -36,7 +36,7 @@ include link to game here
 
 ## 🌱 Game Concept & Features
 
-I chose to create Crush-A-Berry: Garden Jam! as a fun twist on whack-a-mole. I wanted to design a game with the following features
+I chose to create Crush-A-Berry: Garden Jam! as a fun twist on whack-a-mole. I wanted to design a game with the following features:
 
 - Cute, cozy garden theme
 - Simple click-based gameplay
@@ -49,6 +49,8 @@ I chose to create Crush-A-Berry: Garden Jam! as a fun twist on whack-a-mole. I w
 - Add difficulty levels that increase berry spawn speed
 - Implement a high-score or best-time tracker
 - Add/Improve mobile responsiveness
+- Change the color of the game button after starting the game
+- Have a cute song play in the background of the game
 
 ## 🧁 Credits
 

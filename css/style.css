@@ -14,9 +14,6 @@ body {
   flex-direction: column;
 }
 
-.click-locked {
-  cursor: not-allowed; /* changes mouse cursor for caterpillars */
-}
 
 #clickOverlay {
   position: absolute;
@@ -30,33 +27,25 @@ body {
 }
 
 p {
-  font-family:"Margarine", "Comic Sans MS", cursive;
+  font-family: "Margarine", "Comic Sans MS", cursive;
   font-size: 30px;
   margin: 0;
   color: #4a092f;
 }
 
-h1{
+h1 {
   font-family: "Margarine", "Comic Sans MS", cursive;
   font-size: 60px;
   margin: 0;
   color: #4a092f;
 }
 
-#endMessage{
+#endMessage {
   font-family: "Margarine", "Comic Sans MS", cursive;
   font-size: 30px;
   color: #4a092f;
 }
 
-#gameArea {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 20px;
-  overflow: hidden;
-}
 
 /* Hidden utility */
 .hidden {
@@ -239,14 +228,9 @@ h1{
   filter: grayscale(100%) brightness(60%);
 }
 
-.demo-bunny {
-  font-size: 2rem;
-}
-
-.demo-caterpillar {
-  font-size: 2rem;
-}
-
+.demo-bunny,
+.demo-caterpillar,
 .demo-jamJar {
   font-size: 2rem;
 }
+
