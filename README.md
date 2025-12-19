@@ -29,9 +29,9 @@
 ## 📜 Attributions
 
 - Referenced class lecture and lab materials
-- MDN Web Docs (https://developer.mozilla.org/)
-- Pixaby for the soundbites (https://pixabay.com/sound-effects/)
-- WebAIM for WCAG testing (https://webaim.org/resources/contrastchecker/)
+- [MDN Web Docs](https://developer.mozilla.org/)
+- [Pixaby](https://pixabay.com/sound-effects/) for the soundbites 
+- [WebAIM](https://webaim.org/resources/contrastchecker/) for WCAG testing 
 - ChatGPT was used as a debugging and code-review assistant
 
 ## 🌱 Game Concept & Features
