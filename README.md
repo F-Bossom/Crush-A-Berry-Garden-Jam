@@ -18,7 +18,7 @@ https://f-bossom.github.io/Crush-A-Berry-Garden-Jam/
 - You start with **60 seconds**
 - The jam bar fills as you collect ripe berries
 - Avoid clicking the 🐛 or they will eat some of your berries... And you have to swipe this pest away before continuing to gather! Costing you time and jam! (your game timer will lose 5 seconds & your mouse is click-locked 3 seconds)
-- Click the 🐇 to gain more time! They are so happy you chose to give them a berry that you gain more game time! (your game timer will gain 5 seconds)
+- Click the 🐇 to gain more time! They are so happy you chose to pet them, amidst the berry collecting, that you gain more game time! (your game timer will gain 5 seconds)
 
 ## 🛠️ Technologies Used
 
