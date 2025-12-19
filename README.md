@@ -6,7 +6,7 @@
 
 ## 🎮 Getting Started & How to Play
 
-https://f-bossom.github.io/Crush-A-Berry-Garden-Jam/
+[Crush-A-Berry: Garden Jam!](https://f-bossom.github.io/Crush-A-Berry-Garden-Jam/)
 
 - Click **ripe berries** 🫐🍇🍓🍒 to turn them into jam
 - Watch out for **growing berries** — they’re not ready to be made into jam yet!
