@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
 }
 
 body {
@@ -14,9 +17,8 @@ body {
   flex-direction: column;
 }
 
-
 #clickOverlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,6 +26,37 @@ body {
   cursor: not-allowed; /* blocks clicks after caterpillars */
   display: none; /* hidden when not needed */
   z-index: 50;
+  background: transparent;
+}
+
+#clickOverlayMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  padding: 20px 26px;
+  background: #fff8e6;
+  border: 3px solid #ccb27a;
+  border-radius: 14px;
+  font-family: "Margarine", cursive;
+  font-size: 1.6rem;
+  color: #4a092f;
+  text-align: center;
+  z-index: 51;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+  opacity: 0;
+
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#clickOverlayMessage.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 p {
@@ -45,7 +78,6 @@ h1 {
   font-size: 30px;
   color: #4a092f;
 }
-
 
 /* Hidden utility */
 .hidden {
@@ -72,6 +104,7 @@ h1 {
   font-size: 1.2rem;
   cursor: pointer;
 }
+
 #startBtn:hover,
 #restart:hover {
   background: #428034;
@@ -234,3 +267,106 @@ h1 {
   font-size: 2rem;
 }
 
+/* Mobile/Tablet Response */
+/* 📱 Phones */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  #gameHeader {
+    padding: 6px 0;
+  }
+
+  #timerContainer {
+    font-size: 1.8rem;
+  }
+
+  #jamJar {
+    font-size: 2rem;
+  }
+
+  #jamBarContainer {
+    width: 180px;
+    height: 18px;
+  }
+
+  #garden {
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .bush {
+    width: 80px;
+    height: 80px;
+    border-width: 3px;
+  }
+
+  .bush-icon {
+    font-size: 3.8rem;
+    top: 4px;
+  }
+
+  .berry {
+    font-size: 2rem;
+    bottom: 10px;
+  }
+
+  #endScreen {
+    width: 85%;
+    padding: 20px;
+  }
+
+  #endMessage {
+    font-size: 1.4rem;
+  }
+
+  #startBtn,
+  #restart {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+
+  /* Phone-only click overlay message fix */
+  #clickOverlayMessage.show {
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    display: flex !important;
+  }
+}
+
+/* 📟 Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  #garden {
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 14px;
+  }
+
+  .bush {
+    width: 100px;
+    height: 100px;
+  }
+
+  .bush-icon {
+    font-size: 5rem;
+  }
+
+  .berry {
+    font-size: 2.5rem;
+  }
+
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+}
