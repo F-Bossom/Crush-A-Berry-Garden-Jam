@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <link
@@ -16,9 +16,13 @@
   </head>
 
   <body>
-    <!-- Landing Page -->
-    <div id="landing">
+    <!-- Always-visible title -->
+    <div id="siteTitle">
       <h1>Crush-A-Berry: Garden Jam!</h1>
+    </div>
+
+    <!-- Landing Page (instructions + start button only) -->
+    <div id="landing">
       <p>
         Click ripe <span class="demo-berry">🫐🍇🍓🍒</span> to make jam! Lookout
         for growing
@@ -36,32 +40,40 @@
         Avoid clicking <span class="demo-caterpillar">🐛</span> or you will lose
         time! Click the <span class="demo-bunny">🐇</span> for extra time!
       </p>
-      <p>✨Can you fill the jam jar before time runs out?✨</p>
+      <p>✨ Can you fill the jam jar before time runs out? ✨</p>
       <button id="startBtn">Start Game</button>
     </div>
 
-    <!-- Game Header -->
+    <!-- Game Header / HUD -->
     <header id="gameHeader" class="hidden">
-      <div id="jamContainer">
-        <span id="jamJar">🫙</span>
-        <div id="jamBarContainer">
-          <div id="jamBar"></div>
-        </div>
+      <div id="instructionStrip">
+        <span>Click ripe 🫐🍇🍓🍒 to make jam!</span>
+        <span><span class="demo-rotten">🫐🍇🍓🍒</span> Rotten = less jam</span>
+        <span>Click 🐛 = lose time</span>
+        <span>Click 🐇 = gain time</span>
       </div>
 
-      <div id="timerContainer">
-        <span id="timerLabel">⏱:</span>
-        <span id="timer">60s</span>
+      <div id="hudRow">
+        <div id="jamContainer">
+          <span id="jamJar">🫙</span>
+          <div id="jamBarContainer">
+            <div id="jamBar"></div>
+          </div>
+        </div>
+
+        <div id="timerContainer">
+          <span id="timerLabel">⏱:</span>
+          <span id="timer">60s</span>
+        </div>
       </div>
     </header>
 
     <!-- Garden Grid -->
     <div id="garden"></div>
 
-    <!--  Click Lock Overlay -->
+    <!-- Click Lock Overlay -->
     <div id="clickOverlay"></div>
-
-    <div id="clickOverlayMessage">⏸️Freeze! Touched a Caterpillar!😵‍💫</div>
+    <div id="clickOverlayMessage">⏸️ Freeze! Touched a Caterpillar! 😵‍💫</div>
 
     <!-- End Screen -->
     <div id="endScreenOverlay">

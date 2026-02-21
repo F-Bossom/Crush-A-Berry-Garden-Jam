@@ -1,3 +1,22 @@
+/* ===========================
+   CRUSH-A-BERRY: GARDEN JAM!
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+
+:root {
+  --cream: #f7f2e8;
+  --cream-dark: #ede4cc;
+  --gold-border: #ccb27a;
+  --gold-dark: #8c5d2e;
+  --plum: #4a092f;
+  --green: #6bbf59;
+  --green-dark: #428034;
+  --jam: #b13659;
+  --bush-bg: #e3d9bc;
+  --bush-border: #bda877;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +28,283 @@
 }
 
 body {
-  background: #f7f2e8;
+  background: var(--cream);
   color: #333;
+  min-height: 100vh;
   height: 100vh;
-  overflow: hidden; /* prevents scrolling */
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
+
+/* ===========================
+   TYPOGRAPHY
+   =========================== */
+
+p {
+  font-family: "Margarine", "Comic Sans MS", cursive;
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--plum);
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: "Margarine", "Comic Sans MS", cursive;
+  font-size: 3rem;
+  margin: 0;
+  color: var(--plum);
+  text-shadow: 2px 2px 0px rgba(74, 9, 47, 0.12);
+  letter-spacing: 0.5px;
+}
+
+#endMessage {
+  font-family: "Margarine", "Comic Sans MS", cursive;
+  font-size: 1.6rem;
+  color: var(--plum);
+}
+
+/* ===========================
+   HIDDEN UTILITY
+   =========================== */
+
+.hidden {
+  display: none !important;
+}
+
+/* ===========================
+   ALWAYS-VISIBLE TITLE
+   =========================== */
+
+#siteTitle {
+  text-align: center;
+  padding: 16px 20px 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: 3px solid var(--gold-border);
+  flex-shrink: 0;
+}
+
+/* ===========================
+   LANDING PAGE
+   =========================== */
+
+#landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  flex: 1;
+  padding: 20px 20px 24px;
+}
+
+#landing p {
+  max-width: 540px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+  border: 1.5px solid rgba(204, 178, 122, 0.4);
+  font-size: 1.05rem;
+}
+
+#landing p:last-of-type {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
+
+#startBtn,
+#restart {
+  padding: 13px 36px;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-family: "Margarine", cursive;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 0 var(--green-dark), 0 6px 12px rgba(66, 128, 52, 0.25);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  margin-top: 6px;
+}
+
+#startBtn:hover,
+#restart:hover {
+  background: #5aad48;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--green-dark), 0 8px 16px rgba(66, 128, 52, 0.3);
+}
+
+#startBtn:active,
+#restart:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--green-dark), 0 3px 6px rgba(66, 128, 52, 0.2);
+}
+
+/* ===========================
+   GAME HEADER / HUD
+   =========================== */
+
+#gameHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.75);
+  border-bottom: 3px solid var(--gold-border);
+  padding: 8px 24px;
+  flex-shrink: 0;
+}
+
+#jamContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#jamJar {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+#jamBarContainer {
+  width: 200px;
+  height: 22px;
+  background: #f3dcbc;
+  border: 2px solid var(--gold-dark);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#jamBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #b13659, #d4567a);
+  transition: width 0.3s ease;
+  border-radius: 12px;
+}
+
+#timerContainer {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Margarine", cursive;
+  color: var(--plum);
+  font-weight: bold;
+  background: rgba(255, 248, 230, 0.7);
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 2px solid var(--gold-border);
+}
+
+#hudRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ===========================
+   INSTRUCTION STRIP
+   =========================== */
+
+#instructionStrip {
+  font-family: "Margarine", cursive;
+  font-size: 0.85rem;
+  color: var(--plum);
+  text-align: center;
+  opacity: 0.85;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#instructionStrip span + span::before {
+  content: " · ";
+  opacity: 0.5;
+  margin: 0 2px;
+}
+
+/* ===========================
+   GARDEN GRID
+   =========================== */
+
+#garden {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 16px;
+  padding: 16px 0 10px;
+  justify-content: center;
+  align-content: center;
+  flex: 1;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.bush {
+  width: 120px;
+  height: 120px;
+  background: var(--bush-bg);
+  border: 3px solid var(--bush-border);
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.07);
+}
+
+.bush:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+}
+
+.bush:active {
+  transform: scale(0.95);
+}
+
+.bush-icon {
+  font-size: 6rem;
+  line-height: 1;
+  position: absolute;
+  top: 6px;
+  pointer-events: none;
+}
+
+.berry {
+  position: absolute;
+  bottom: 14px;
+  font-size: 2.5rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.berry.growing {
+  opacity: 0.55;
+  transform: scale(0.65);
+}
+
+.berry.ripe {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.berry.rotten {
+  filter: grayscale(100%) brightness(55%);
+}
+
+/* ===========================
+   CLICK OVERLAY
+   =========================== */
 
 #clickOverlay {
   position: fixed;
@@ -23,8 +312,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  cursor: not-allowed; /* blocks clicks after caterpillars */
-  display: none; /* hidden when not needed */
+  cursor: not-allowed;
+  display: none;
   z-index: 50;
   background: transparent;
 }
@@ -34,23 +323,21 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  padding: 20px 26px;
+  padding: 18px 28px;
   background: #fff8e6;
-  border: 3px solid #ccb27a;
-  border-radius: 14px;
+  border: 3px solid var(--gold-border);
+  border-radius: 16px;
   font-family: "Margarine", cursive;
-  font-size: 1.6rem;
-  color: #4a092f;
+  font-size: 1.5rem;
+  color: var(--plum);
   text-align: center;
   z-index: 51;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   pointer-events: none;
   opacity: 0;
-
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -59,314 +346,112 @@ body {
   transform: translate(-50%, -50%) scale(1);
 }
 
-p {
-  font-family: "Margarine", "Comic Sans MS", cursive;
-  font-size: 30px;
-  margin: 0;
-  color: #4a092f;
-}
-
-h1 {
-  font-family: "Margarine", "Comic Sans MS", cursive;
-  font-size: 60px;
-  margin: 0;
-  color: #4a092f;
-}
-
-#endMessage {
-  font-family: "Margarine", "Comic Sans MS", cursive;
-  font-size: 30px;
-  color: #4a092f;
-}
-
-/* Hidden utility */
-.hidden {
-  display: none;
-}
-
-/* Landing Page */
-#landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-}
-
-#startBtn,
-#restart {
-  padding: 12px 24px;
-  background: #6bbf59;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-#startBtn:hover,
-#restart:hover {
-  background: #428034;
-}
-
-/* Header */
-#gameHeader {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.712);
-  border-bottom: 4px solid #ccb27a;
-  user-select: none; /* prevents mouse from highlighting */
-}
-
-/* Jam bar */
-#jamContainer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-#jamJar {
-  font-size: 2.5rem;
-}
-
-#jamBarContainer {
-  width: 250px;
-  height: 24px;
-  background: #f3dcbc;
-  border: 2px solid #8c5d2e;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-#jamBar {
-  height: 100%;
-  width: 0%;
-  background: #b13659;
-  transition: width 0.3s;
-}
-
-/* Timer */
-#timerContainer {
-  font-size: 2.5rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-}
-
-/* Garden Grid */
-#garden {
-  display: grid;
-  grid-template-columns: repeat(4, 130px);
-  grid-template-rows: repeat(3, 130px);
-  gap: 20px;
-  margin-top: 10px;
-  justify-content: center;
-  user-select: none; /* prevents mouse from highlighting the grid */
-  cursor: pointer;
-}
-
-/* Bush square */
-.bush {
-  width: 130px;
-  height: 130px;
-  background: #e3d9bc;
-  border: 4px solid #bda877;
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bush-icon {
-  font-size: 7rem;
-  line-height: 1;
-  position: absolute;
-  top: 8px;
-  pointer-events: none;
-}
-
-/* Berry */
-.berry {
-  position: absolute;
-  bottom: 20px;
-  font-size: 3rem;
-}
-
-/* Growing */
-.berry.growing {
-  opacity: 0.6;
-  transform: scale(0.7);
-}
-
-/* Ripe */
-.berry.ripe {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Rotten */
-.berry.rotten {
-  filter: grayscale(100%) brightness(60%);
-}
+/* ===========================
+   END SCREEN
+   =========================== */
 
 #endScreenOverlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
-  display: none; /* hidden by default */
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 20;
+  backdrop-filter: blur(3px);
 }
 
-/* Popup box */
 #endScreen {
   background: #fff8e6;
-  border: 3px solid #ccb27a;
-  border-radius: 12px;
-  padding: 30px 40px;
+  border: 3px solid var(--gold-border);
+  border-radius: 16px;
+  padding: 36px 48px;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  /* smooth pop-in */
+  align-items: center;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
   transform: scale(0.8);
   opacity: 0;
   transition: 0.25s ease;
 }
 
-/* When shown */
 #endScreen.show {
   transform: scale(1);
   opacity: 1;
 }
 
-/* Demo-only berries for instruction text */
-.demo-berry {
-  font-size: 2rem;
-}
+/* ===========================
+   DEMO BERRY STYLES
+   =========================== */
 
-.demo-growing {
-  opacity: 0.6;
-  font-size: 1.5rem;
-}
+.demo-berry { font-size: 1.3rem; }
+.demo-growing { opacity: 0.55; font-size: 1.1rem; }
+.demo-rotten { filter: grayscale(100%) brightness(55%); }
+.demo-bunny, .demo-caterpillar, .demo-jamJar { font-size: 1.3rem; }
 
-.demo-rotten {
-  filter: grayscale(100%) brightness(60%);
-}
+/* ===========================
+   RESPONSIVE — PHONES
+   =========================== */
 
-.demo-bunny,
-.demo-caterpillar,
-.demo-jamJar {
-  font-size: 2rem;
-}
-
-/* Mobile/Tablet Response */
-/* 📱 Phones */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 2.2rem;
-    text-align: center;
-  }
+  body { height: 100dvh; overflow: hidden; }
 
-  p {
-    font-size: 1.1rem;
-    padding: 0 10px;
-  }
+  #siteTitle { padding: 10px 14px 6px; }
+  h1 { font-size: 1.65rem; }
 
-  #gameHeader {
-    padding: 6px 0;
-  }
+  #landing { padding: 12px 14px 16px; gap: 8px; }
+  #landing p { font-size: 0.88rem; padding: 6px 10px; }
 
-  #timerContainer {
-    font-size: 1.8rem;
-  }
+  #startBtn, #restart { font-size: 1rem; padding: 11px 28px; }
 
-  #jamJar {
-    font-size: 2rem;
-  }
+  #gameHeader { flex-direction: column; gap: 6px; padding: 8px 12px; }
+  #jamBarContainer { width: 160px; height: 16px; }
+  #jamJar { font-size: 1.6rem; }
+  #timerContainer { font-size: 1.4rem; padding: 3px 12px; }
 
-  #jamBarContainer {
-    width: 180px;
-    height: 18px;
-  }
+#instructionStrip { font-size: 0.72rem; max-width: 100%; }
 
   #garden {
-    grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(3, 80px);
+    grid-template-columns: repeat(4, 72px);
+    grid-template-rows: repeat(3, 72px);
     gap: 10px;
-    margin-top: 8px;
+    padding: 10px 0 8px;
   }
 
-  .bush {
-    width: 80px;
-    height: 80px;
-    border-width: 3px;
-  }
+  .bush { width: 72px; height: 72px; border-width: 2px; border-radius: 8px; }
+  .bush-icon { font-size: 3.4rem; top: 3px; }
+  .berry { font-size: 1.8rem; bottom: 8px; }
 
-  .bush-icon {
-    font-size: 3.8rem;
-    top: 4px;
-  }
+  #endScreen { width: 88%; padding: 24px 20px; }
+  #endMessage { font-size: 1.3rem; }
 
-  .berry {
-    font-size: 2rem;
-    bottom: 10px;
-  }
-
-  #endScreen {
-    width: 85%;
-    padding: 20px;
-  }
-
-  #endMessage {
-    font-size: 1.4rem;
-  }
-
-  #startBtn,
-  #restart {
-    font-size: 1rem;
-    padding: 10px 18px;
-  }
-
-  /* Phone-only click overlay message fix */
+  #clickOverlayMessage { font-size: 1.1rem; padding: 14px 18px; width: 85%; }
   #clickOverlayMessage.show {
     opacity: 1 !important;
     transform: translate(-50%, -50%) scale(1) !important;
-    display: flex !important;
   }
 }
 
-/* 📟 Tablets */
+/* ===========================
+   RESPONSIVE — TABLETS
+   =========================== */
+
 @media (min-width: 601px) and (max-width: 900px) {
+  body { height: 100dvh; overflow: hidden; }
+  h1 { font-size: 2.2rem; }
+  #gameHeader { gap: 20px; padding: 10px 20px; }
+
+  #instructionStrip { font-size: 0.85rem; }
+
   #garden {
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 14px;
+    gap: 12px;
   }
-
-  .bush {
-    width: 100px;
-    height: 100px;
-  }
-
-  .bush-icon {
-    font-size: 5rem;
-  }
-
-  .berry {
-    font-size: 2.5rem;
-  }
-
-  body {
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
-  }
+  .bush { width: 100px; height: 100px; }
+  .bush-icon { font-size: 5rem; }
+  .berry { font-size: 2.2rem; }
+  #jamBarContainer { width: 180px; }
 }
